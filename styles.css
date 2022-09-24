@@ -1,0 +1,161 @@
+
+.calcFrame{
+    width: 375px;
+    height: 430px;
+    margin-left: 275px;
+    padding: 8px;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: rgba(36, 35, 35, 0.933);
+
+}
+
+.btnDisplay{
+    display: flex;
+    width: 100px;
+    margin-top: 25px;
+    padding-left: 26px;
+}
+
+#numberInput{
+    width: 250px;
+    height: 60px;
+    margin-top: 35px;
+    margin-left: 54px;
+    margin-bottom: 8px;
+    font-size: 24px;
+    text-align: right;
+    font-weight: bolder;
+    border-radius: 6px;
+}
+
+.op-col{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    padding-left: 1px;
+}
+
+.rowOne, .rowTwo, .rowThree, .rowFour{
+    display: block;
+    flex-direction: row;
+    padding: 2px;
+
+}
+
+button{
+    width: 60px;
+    height: 60px;
+    margin-top: 4px;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+#eqBtn{
+    height: 123px;
+    background-color: rgb(234, 120, 38);
+    color: white;
+}
+
+#clrBtn{
+    /* border-radius: 50%; */
+    background-color: rgba(255, 255, 255, 0.891);
+}
+
+#divBtn{
+    background-color: rgb(234, 120, 38);
+    color: white;
+}
+
+.rowOne > button {
+    background-color: rgb(156, 154, 154);
+    color: white;
+}
+
+.rowTwo > button {
+    background-color: rgb(156, 154, 154);
+    color: white;
+}
+
+.rowThree > button {
+    background-color: rgb(156, 154, 154);
+    color: white;
+}
+
+.rowFour > button {
+    background-color: rgb(101, 100, 100);
+    color: white;
+}
+/* .rowOne{
+    display: block;
+    flex-direction: row;
+
+    width: 300px;
+
+} */
+/* .rowTwo{
+    display: block;
+    flex-direction: row;
+
+
+} */
+/* .calcFrame{
+    padding: 8px;
+    margin-left: 350px;
+    margin-right: auto;
+    display: inline;
+}
+.rowOne, .rowTwo, .rowThree, .rowFour{
+    display: block;
+    width: 300px;
+}
+
+.numberDisplay{
+    display: inline;
+    margin-bottom: 8px;
+}
+
+#numberInput{
+    width: 200px;
+    height: 60px;
+    margin-left: 43px;
+    font-size: 24px;
+    text-align: right;
+    font-weight: bolder;
+    border-radius: 6px;
+}
+
+button{
+    width: 70px;
+    height: 70px;
+    margin-top: 4px;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.op-cont{
+    display: block;
+    margin-left: 300px;
+    margin-top: 0px;
+
+
+}
+.operators{
+    display: flex;
+    flex-direction: column;
+}
+
+#eqBtn{
+    height: 80px;
+}
+
+#modBtn, #divBtn, #clrBtn{
+    height: 45px;
+    margin-top: 0px;
+}
+
+.rowOne{
+    margin-top: 10px;
+
+} */
