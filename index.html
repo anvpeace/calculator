@@ -6,56 +6,162 @@
     <body>
 
         <div class="calcFrame">
-
             <div class="numberDisplay">
-                <input class="numberInput" type="text" value="" disabled>
+                <input id="numberInput" type="text" placeholder="0" disabled>
             </div>
+
+            <div class="output">
+                <div data-first-operation class="operandOne"></div>
+                <div data-second-operation class="operandTwo"></div>
+            </div> 
+            
             <div class="btnDisplay">
                 <div class="rowOne">
-                    <button class="digit" type="button" value=7>7</button>
-                    <button class="digit"  type="button" value=4>4</button>
-                    <button class="digit"  type="button" value=1>1</button>
-                    <button class="digit"  type="button" value="0">0</button>
+                    <button  type="button" value="7" onclick="display('7')">7</button>
+                    <button  type="button" value="4" onclick="display('4')">4</button>
+                    <button  type="button" value="1" onclick="display('1')">1</button>
+                    <button  type="button" value="0" onclick="display('0')">0</button>
 
 
 
                 </div>
 
                 <div class="rowTwo">
-                    <button class="digit"  type="button" value=8>8</button>
-                    <button class="digit"  type="button" value=5>5</button>
-                    <button class="digit"  type="button" value=2>2</button>
-                    <button class="digit"  type="button" value="00">00</button>
+                    <button  type="button" value="8" onclick="display('8')">8</button>
+                    <button  type="button" value="5" onclick="display('5')">5</button>
+                    <button  type="button" value="2" onclick="display('2')">2</button>
+                    <button  type="button" value="00" onclick="display('00')">00</button>
 
                 </div>
 
                 <div class="rowThree">
-                    <button class="digit"  type="button" value=9>9</button>
-                    <button class="digit"  type="button" value=6>6</button>
-                    <button class="digit"  type="button" value=3>3</button>
-                    <button class="decimal" type="button" value=".">.</button>
+                    <button  type="button" value="9" onclick="display('9')">9</button>
+                    <button  type="button" value="6" onclick="display('6')">6</button>
+                    <button  type="button" value="3" onclick="display('3')">3</button>
+                    <button  type="button" value="." onclick="decimal('.')">.</button>
 
 
                 </div>
                 <div class="rowFour">
-                    <button class="operator" type="submit" value="*">*</button>
-                    <button class="operator" type="button" value="%">%</button>
-                    <button class="operator" type="button" value="-">-</button>
-                    <button class="operator" type="button" value="+">+</button>
+                    <button  type="button" value="*" onclick="secondOp('*')">x</button>
+                    <button  type="button" value="%" onclick="secondOp('%')">%</button>
+                    <button  type="button" value="-" onclick="secondOp('-')">-</button>
+                    <button  type="button" value="+" onclick="secondOp('+')">+</button>
                 </div> 
 
                 <div class="op-col">
-                    <button  class="all-clear" id="clrBtn" type="button" value="0">AC</button>
-                    <button class="operator" id="divBtn" type="button" value="/">/</button>
-                    <button class="operator"  id="eqBtn" type="button" value="=">=</button>
+                    <button  id="clrBtn" type="button" value="0">AC</button>
+                    <button  id="divBtn" type="button" value="/">÷</button>
+                    <button  id="eqBtn" type="button" value="=">=</button>
                 </div>
             </div>
             
-            <script src="index.js"> </script>
 
             </div>
         
         
-       
+            <script src="index.js"> </script>
+
     </body>
 </html>
+
+<!-- 
+
+let calculator = {
+    displayValue: 0,
+    firstOperand: null,
+    waitingForSecondOperand: false
+}
+
+
+function inputDigit(digit){
+    // const { displayValue } = calculator;
+
+    // calculator.displayValue = displayValue === '0' ? digit : displayValue + digit
+
+    if(calculator.displayValue === 0){
+        calculator.displayValue = digit
+    }else{
+        calculator.displayValue + digit
+    }
+    console.log(calculator);
+
+}
+
+function inputDecimal(dot){
+    if(!calculator.displayValue.includes(dot)){
+        calculator.displayValue += dot
+
+    }
+}
+
+function handleOperator(nextOperator) {
+
+    const { firstOperand, displayValue  } = calculator;
+
+    // const operator = document.querySelectorAll("[data-operator]")
+
+
+    const inputValue = parseFloat(displayValue);
+
+
+    
+    if (firstOperand === null && !isNaN(inputValue)) {
+      // Update the firstOperand property
+            calculator.firstOperand === inputValue;
+
+
+    }
+    
+      calculator.waitingForSecondOperand = true;
+    //   calculator.operator = nextOperator;
+  }
+
+  handleOperator()
+
+function displayUpdate (){
+    const display = document.querySelector(".numberInput")
+
+    display.value = calculator.displayValue
+}
+
+displayUpdate();
+
+
+
+const numbers = document.querySelector(".btnDisplay");
+
+numbers.addEventListener("click", (event) =>{
+    const {target} = event;
+
+    switch (event){
+
+        // case target.classList.contains("digit"):
+        //     handleOperator(target.value);
+        //     displayUpdate();
+        //     break;
+
+       
+        case target.attribute === "operator":
+            handleOperator(target.value);
+            displayUpdate();
+            console.log(`operator ${target.value}`);
+            break;
+        case target.classList.contains("decimal"):
+            inputDecimal(target.value);
+            displayUpdate();
+            console.log(`decimal ${target.value}`);
+            break;
+        case target.classList.contains("all-clear"):
+            console.log(`all-clear ${target.value}`);
+            break;
+
+    }
+
+    inputDigit(target.value);
+    displayUpdate();
+    console.log( target.classList.value, target.value)
+})
+
+
+ -->
