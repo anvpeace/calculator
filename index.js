@@ -17,6 +17,9 @@ var equalsEl = document.querySelector('.equals');
 
 var total = document.getElementById('equation-total');
 
+var clear = document.querySelector('.clear');
+
+
 
 
 let firstOperand = '';
@@ -24,6 +27,26 @@ let operatorValue = '';
 let secondOperand = '';
 let result = null;
 let hasDot= false
+
+clear.addEventListener('click', ()=>{
+
+    function clear(){
+        displayCurrentValue.value= '';
+        operatorValue.innerText = '';
+        operatorValue = '';
+        operatorDisplay.innerHTML=''
+        numberOneDisplay.innerText= '';
+        numberTwoDisplay.innerText= '';
+        total.innerText = ''
+        result = null;
+        hasDot= false
+    }
+
+    clear()
+    
+
+})
+
 
 numbers.forEach(number =>{
     number.addEventListener('click',(e)=>{
@@ -84,22 +107,39 @@ function operation(){
     switch(operatorValue){
         case "+":
            result= opOne + opTwo;
-           displayCurrentValue.innerText += result
+           total.innerText = ` = ${parseFloat(result).toFixed(3)}`
+           displayCurrentValue.value = `${parseFloat(result).toFixed(2)}`
            console.log(result)
-           total.innerText = ` = ${result}`
            break;
 
         case "-":
             result = opOne - opTwo;
+            total.innerText = ` = ${parseFloat(result).toFixed(3)}`
+            displayCurrentValue.value = `${parseFloat(result).toFixed(2)}`
             console.log(result)
             break;
         case "÷":
             result = opOne / opTwo;
+            total.innerText = ` = ${parseFloat(result).toFixed(3)}`
+            displayCurrentValue.value = `${parseFloat(result).toFixed(2)}`
             console.log(result)
             break;
+        case "x":
+            result = opOne * opTwo;
+            total.innerText = ` = ${parseFloat(result).toFixed(3)}`
+            displayCurrentValue.value = `${parseFloat(result).toFixed(2)}`
+            console.log(result)
+            break;
+        case "%":
+            result = opOne % opTwo;
+            total.innerText = ` = ${parseFloat(result).toFixed(3)}`
+            displayCurrentValue.value = `${parseFloat(result).toFixed(2)}`
+            console.log(result)
+            break;        
 
     }
 }
+
 
 
 

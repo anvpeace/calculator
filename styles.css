@@ -2,6 +2,7 @@
 .calculatorFrame{
     width: 375px;
     height: 430px;
+    margin-top: 75px;
     margin-left: 275px;
     padding: 8px;
     border: 3px solid black;
