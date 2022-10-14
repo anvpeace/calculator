@@ -70,7 +70,7 @@ numbers.forEach(number =>{
 operations.forEach(operator =>{
     operator.addEventListener("click", (e)=>{
         displayCurrentValue.value = ""
-        numberOneDisplay.innerText = `${parseFloat(firstOperand).toFixed(2)}`
+        numberOneDisplay.innerText = ` ${parseFloat(firstOperand).toFixed(2)} `
 
         if(!displayCurrentValue)return;
         hasDot = false
@@ -88,7 +88,7 @@ operations.forEach(operator =>{
 equalsEl.addEventListener("click", (e) =>{
     secondOperand = displayCurrentValue.value
 
-    numberTwoDisplay.innerText = `${parseFloat(secondOperand).toFixed(2)}`
+    numberTwoDisplay.innerText = ` ${parseFloat(secondOperand).toFixed(2)} `
 
         displayCurrentValue.value = ""
 

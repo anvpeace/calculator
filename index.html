@@ -6,18 +6,26 @@
     <body>
 
         <div class="calculatorFrame">
-            <div class="numberContainer" id="display-box">
-                <input id="number-input" type="text" placeholder="0" disabled>
-            </div>
+    
+                <div class="numberContainer">
 
-            <div class="output" id="equation-output">
-                <div id="operand-one" style="width:22px; margin-left: 12px;"></div>
-                <div id="operator-display" style="width:10px; margin-left: 20px;"></div>
-                <div id="operand-two" style="width:22px; margin-left: 10px;"></div>
-                <div id="equation-total" style="width:62px; margin-left: 30px;"></div>
+                    <div class="output" id="equation-output">
+                        <div style="display: inline-flex ;">
+                            <p id="operand-one" ></p>
+                            <p id="operator-display" ></p>
+                            <p id="operand-two" ></p>
+                            <p id="equation-total"></p>
+                        </div>
+                       
 
+                    </div>
+                    <div id="display-box">
+                        <input id="number-input" type="text" placeholder="0" disabled>
+                    </div>
+                </div>
 
-            </div> 
+            
+ 
             
             <div class="btnDisplay" id="button-display">
                 <div class="rowOne" id="row-one">
