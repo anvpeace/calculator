@@ -5,54 +5,56 @@
     </head>
     <body>
 
-        <div class="calcFrame">
-            <div class="numberDisplay">
-                <input id="numberInput" type="text" placeholder="0" disabled>
+        <div class="calculatorFrame">
+            <div class="numberContainer" id="display-box">
+                <input id="number-input" type="text" placeholder="0" disabled>
             </div>
 
-            <div class="output">
-                <div data-first-operation class="operandOne"></div>
-                <div data-second-operation class="operandTwo"></div>
+            <div class="output" id="equation-output">
+                <div id="operand-one" style="width:22px; margin-left: 12px;"></div>
+                <div id="operator-display" style="width:10px; margin-left: 20px;"></div>
+                <div id="operand-two" style="width:22px; margin-left: 10px;"></div>
+                <div id="equation-total" style="width:42px; margin-left: 20px;"></div>
+
+
             </div> 
             
-            <div class="btnDisplay">
-                <div class="rowOne">
-                    <button  type="button" value="7" onclick="display('7')">7</button>
-                    <button  type="button" value="4" onclick="display('4')">4</button>
-                    <button  type="button" value="1" onclick="display('1')">1</button>
-                    <button  type="button" value="0" onclick="display('0')">0</button>
-
-
+            <div class="btnDisplay" id="button-display">
+                <div class="rowOne" id="row-one">
+                    <button  type="button" class="number">7</button>
+                    <button  type="button" class="number">4</button>
+                    <button  type="button" class="number">1</button>
+                    <button  type="button" class="number">0</button>
 
                 </div>
 
                 <div class="rowTwo">
-                    <button  type="button" value="8" onclick="display('8')">8</button>
-                    <button  type="button" value="5" onclick="display('5')">5</button>
-                    <button  type="button" value="2" onclick="display('2')">2</button>
-                    <button  type="button" value="00" onclick="display('00')">00</button>
+                    <button  type="button" class="number">8</button>
+                    <button  type="button" class="number">5</button>
+                    <button  type="button" class="number">2</button>
+                    <button  type="button" class="number" >00</button>
 
                 </div>
 
                 <div class="rowThree">
-                    <button  type="button" value="9" onclick="display('9')">9</button>
-                    <button  type="button" value="6" onclick="display('6')">6</button>
-                    <button  type="button" value="3" onclick="display('3')">3</button>
-                    <button  type="button" value="." onclick="decimal('.')">.</button>
+                    <button  type="button" class="number">9</button>
+                    <button  type="button" class="number">6</button>
+                    <button  type="button" class="number">3</button>
+                    <button  type="button" class="number dot">.</button>
 
 
                 </div>
                 <div class="rowFour">
-                    <button  type="button" value="*" onclick="secondOp('*')">x</button>
-                    <button  type="button" value="%" onclick="secondOp('%')">%</button>
-                    <button  type="button" value="-" onclick="secondOp('-')">-</button>
-                    <button  type="button" value="+" onclick="secondOp('+')">+</button>
-                </div> 
+                    <button  type="button" class="operation">x</button>
+                    <button  type="button" class="operation">%</button>
+                    <button  type="button" class="operation">-</button>
+                    <button  type="button" class="operation">+</button>
+                </div>  
 
                 <div class="op-col">
-                    <button  id="clrBtn" type="button" value="0">AC</button>
-                    <button  id="divBtn" type="button" value="/">÷</button>
-                    <button  id="eqBtn" type="button" value="=">=</button>
+                    <button  id="clrBtn" type="button" class="clear">AC</button>
+                    <button  id="divBtn" type="button" class="operation">÷</button>
+                    <button  id="eqBtn" type="button" class="equals">=</button>
                 </div>
             </div>
             
@@ -64,6 +66,7 @@
 
     </body>
 </html>
+
 
 <!-- 
 
